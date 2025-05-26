@@ -2,7 +2,7 @@
 
 a codebase of a batchelor thesis that detects, 
 quantizes ionizing radiation-induced foci (IRIFs), 
-forming around DNA double stranded breaks (DSBs).
+forming around DNA double-strand breaks (DSBs).
 
 takes czi files, with IRIFs fluorescent images, image requirements:
 - S (scenes) dimension: ≥1
