@@ -22,9 +22,12 @@ takes czi files, with IRIFs fluorescent images, image requirements:
 | `networkx`     | `~=3.4.2`      |
   
 ## Files:
-- [find_pillar.py](find_pillar.py) finds pillar coordinates; finds goalposts from two lists of pillars (red and blue)
-- [transformations.py](transformations.py) transforms matrix into list point cloud without nan values and rotates; visualises point cloud
-- [vision.py](vision.py) draws pillar boundaries with colors; thread display camera feed; thread: find goal posts of pillars (red and blue)
-- [take_picture.py](take_picture.py) saves .jpg picture from rgb camera
-- [take_data.py](take_data.py) saves all data into .mat file and corresponding rgb image into .jpg file
-- [params.txt](params.txt) note of color measurements
+- [constants.py](constants.py) - defining global constants for cell and IRIF image analysis
+- [data_matrix.py](data_matrix.py) - DataMatrix class: representing and processing multidimensional image data using Laplacian filtering
+- [read_czi.py](read_czi.py) - CZI class: loading and processing czi file
+- [cell_segment.py](cell_segment.py) - image segmentation utilities for cell detection and division; CellSegment class: connected cell segment representation
+- [foci_segment.py](foci_segment.py) - FociSegment class: segmenting and grouping foci within cell region
+- [cell_foci_segment.py](cell_foci_segment.py) - CellFociSegment class: wraps CellSegment and a mapping from channel identifiers to FociSegment
+- [segments.py](segments.py) - Segments class: wraps CellFociSegment classes for all cells in particular scene
+- [drawing.py](drawing.py) - visualisation and png save utilities
+- [detect.py](detect.py) - Detection class: detection pipeline combining CZI file reading, cell segmentation, and foci extraction
