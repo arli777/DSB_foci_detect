@@ -12,7 +12,7 @@ takes czi files, with IRIFs fluorescent images, image requirements:
 - missing dimensions: M (mosaic) and T (time)
   
 ## Files:
-- [requirements.txt](requirements.txt)] - Python package requirements
+- [requirements.txt](requirements.txt) - Python package requirements
 - [constants.py](constants.py) - defining global constants for cell and IRIF image analysis
 - [data_matrix.py](data_matrix.py) - DataMatrix class: representing and processing multidimensional image data using Laplacian filtering
 - [read_czi.py](read_czi.py) - CZI class: loading and processing czi file
