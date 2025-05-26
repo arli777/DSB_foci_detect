@@ -11,13 +11,15 @@ takes czi files, with IRIFs fluorescent images, image requirements:
 - C (channel) dimension: ≥2 DAPI and IRIFs markers (≥1)
 - missing dimensions: M (mosaic) and T (time)
 
-module requirements used:
-  numpy~=2.2.6
-  matplotlib~=3.10.3
-  scikit-image~=0.25.2
-  scipy~=1.15.3
-  czifile~=2019.7.2.1
-  networkx~=3.4.2
+### Python package requirements with specific version
+| Package        | Version        |
+| -------------- | -------------- |
+| `numpy`        | `~=2.2.6`      |
+| `matplotlib`   | `~=3.10.3`     |
+| `scikit-image` | `~=0.25.2`     |
+| `scipy`        | `~=1.15.3`     |
+| `czifile`      | `~=2019.7.2.1` |
+| `networkx`     | `~=3.4.2`      |
   
 ## Files:
 - [find_pillar.py](find_pillar.py) finds pillar coordinates; finds goalposts from two lists of pillars (red and blue)
