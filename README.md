@@ -10,18 +10,9 @@ takes czi files, with IRIFs fluorescent images, image requirements:
 - XY (lateral) dimensions: must be consistent across all scenes
 - C (channel) dimension: ≥2 DAPI and IRIFs markers (≥1)
 - missing dimensions: M (mosaic) and T (time)
-
-### Python package requirements with specific version
-| Package        | Version        |
-| -------------- | -------------- |
-| `numpy`        | `~=2.2.6`      |
-| `matplotlib`   | `~=3.10.3`     |
-| `scikit-image` | `~=0.25.2`     |
-| `scipy`        | `~=1.15.3`     |
-| `czifile`      | `~=2019.7.2.1` |
-| `networkx`     | `~=3.4.2`      |
   
 ## Files:
+- [requirements.txt](requirements.txt)] - Python package requirements
 - [constants.py](constants.py) - defining global constants for cell and IRIF image analysis
 - [data_matrix.py](data_matrix.py) - DataMatrix class: representing and processing multidimensional image data using Laplacian filtering
 - [read_czi.py](read_czi.py) - CZI class: loading and processing czi file
@@ -31,3 +22,13 @@ takes czi files, with IRIFs fluorescent images, image requirements:
 - [segments.py](segments.py) - Segments class: wraps CellFociSegment classes for all cells in particular scene
 - [drawing.py](drawing.py) - visualisation and png save utilities
 - [detect.py](detect.py) - Detection class: detection pipeline combining CZI file reading, cell segmentation, and foci extraction
+
+## usual pipeline
+```
+from detect import Detect
+
+d = Detect("path/to/file.czi")
+d.detect()
+d.save_mat("path/to/results")
+d.save_draw("path/to/results")
+```
